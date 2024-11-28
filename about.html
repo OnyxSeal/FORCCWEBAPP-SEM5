@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gigaval | About us</title>
+
+    <link rel="stylesheet" href="cursor.css">
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="https://www.gigaval.com/favicon.ico">
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        font-family: Poppins;
+      }
+
+      .container{
+        margin-top: 8%;
+      }
+
+      #cards {
+        transition: 1s;
+      }
+      #cards:hover {
+        transition: 1s;
+        box-shadow: 0px 9px 30px rgba(5, 247, 255, 0.3);
+      }
+
+      #title {
+        font-size: 4vw;
+      }
+
+      #subtitle {
+        font-size: 1.5vw;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      img {
+        border-radius: 10px;
+      }
+
+      h6 {
+        font-size: medium;
+        margin-top: -5%;
+        cursor: pointer;
+      }
+
+      h1,
+      p {
+        color: white;
+        text-shadow:
+            /* 0 0 7px #fff, */ 0 0 10px #fff, 0 0 21px #fff,
+          0 0 42px #5271ff, 0 0 82px #5271ff, 0 0 92px #5271ff,
+          0 0 102px #5271ff, 0 0 151px #5271ff;
+      }
+
+      body {
+        margin-top: 20px;
+        background: #252935;
+        cursor: pointer;
+      }
+      .single_advisor_profile {
+        position: relative;
+        margin-bottom: 50px;
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+        z-index: 1;
+        border-radius: 15px;
+        -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+        box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+      }
+      .single_advisor_profile .advisor_thumb {
+        position: relative;
+        z-index: 1;
+        border-radius: 15px 15px 0 0;
+        margin: 0 auto;
+        padding: 30px 30px 0 30px;
+        background-color: #3f8bfd;
+        overflow: hidden;
+      }
+      .single_advisor_profile .advisor_thumb::after {
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+        position: absolute;
+        width: 150%;
+        height: 80px;
+        bottom: -45px;
+        left: -25%;
+        content: "";
+        background-color: #ffffff;
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+      }
+      @media only screen and (max-width: 575px) {
+        .single_advisor_profile .advisor_thumb::after {
+          height: 160px;
+          bottom: -90px;
+        }
+      }
+      .single_advisor_profile .advisor_thumb .social-info {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        bottom: 0;
+        right: 30px;
+        text-align: right;
+      }
+      .single_advisor_profile .advisor_thumb .social-info a {
+        font-size: 24px;
+        color: #020710;
+        padding: 0 5px;
+      }
+      .single_advisor_profile .advisor_thumb .social-info a:hover,
+      .single_advisor_profile .advisor_thumb .social-info a:focus {
+        color: #3f43fd;
+      }
+      .single_advisor_profile .advisor_thumb .social-info a:last-child {
+        padding-right: 0;
+      }
+      .single_advisor_profile .single_advisor_details_info {
+        position: relative;
+        z-index: 1;
+        padding: 30px;
+        text-align: right;
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+        border-radius: 0 0 15px 15px;
+        background-color: #ffffff;
+      }
+      .single_advisor_profile .single_advisor_details_info::after {
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+        position: absolute;
+        z-index: 1;
+        width: 50px;
+        height: 3px;
+        background-color: #3f43fd;
+        content: "";
+        top: 12px;
+        right: 30px;
+      }
+      .single_advisor_profile .single_advisor_details_info h6 {
+        margin-bottom: 0.25rem;
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .single_advisor_profile .single_advisor_details_info h6 {
+          font-size: 14px;
+        }
+      }
+      .single_advisor_profile .single_advisor_details_info p {
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .single_advisor_profile .single_advisor_details_info p {
+          font-size: 12px;
+        }
+      }
+      .single_advisor_profile:hover .advisor_thumb::after,
+      .single_advisor_profile:focus .advisor_thumb::after {
+        background-color: #070a57;
+      }
+      .single_advisor_profile:hover .advisor_thumb .social-info a,
+      .single_advisor_profile:focus .advisor_thumb .social-info a {
+        color: #ffffff;
+      }
+      .single_advisor_profile:hover .advisor_thumb .social-info a:hover,
+      .single_advisor_profile:hover .advisor_thumb .social-info a:focus,
+      .single_advisor_profile:focus .advisor_thumb .social-info a:hover,
+      .single_advisor_profile:focus .advisor_thumb .social-info a:focus {
+        color: #ffffff;
+      }
+      .single_advisor_profile:hover .single_advisor_details_info,
+      .single_advisor_profile:focus .single_advisor_details_info {
+        background-color: #070a57;
+      }
+      .single_advisor_profile:hover .single_advisor_details_info::after,
+      .single_advisor_profile:focus .single_advisor_details_info::after {
+        background-color: #ffffff;
+      }
+      .single_advisor_profile:hover .single_advisor_details_info h6,
+      .single_advisor_profile:focus .single_advisor_details_info h6 {
+        color: #ffffff;
+      }
+      .single_advisor_profile:hover .single_advisor_details_info p,
+      .single_advisor_profile:focus .single_advisor_details_info p {
+        color: #ffffff;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cursor {
+        width: 40px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        transition-duration: 200ms;
+        transition-timing-function: ease-out;
+        pointer-events: none;
+      }
+
+      .cursoreffect {
+        content: "";
+        width: 40px;
+        height: 40px;
+        border: 1px solid #4deeea;
+        box-shadow: 0 0 20px #4deeea, 0 0 40px #4deeea, 0 0 80px #4deeea;
+        border-radius: 50%;
+        position: absolute;
+        -webkit-animation: cursorPulse 1s;
+      }
+
+      @-webkit-keyframes cursorPulse {
+        0% {
+          -webkit-transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scale(3);
+          opacity: 0;
+        }
+      }
+
+
+      /* nav */
+      li, a {
+        font-weight: 600;
+        font-size: 21px;
+        color: #c2c2c2;
+        text-decoration: none;
+
+        &&:hover{
+          text-decoration: none;
+        }
+      }
+
+    h2{
+        text-shadow: 5px 5px 0px white;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 8%;
+        background-color: #0c0c0c;
+        z-index: 1000;
+    }
+
+    .logo {
+        cursor: pointer;
+        width: 160px;
+    }
+
+    .navlink {
+        list-style: none;
+    }
+
+    .navlink li {
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+    .navlink li a {
+        position: relative;
+        cursor: url('https://cdn.custom-cursor.com/db/10267/32/among-us-tom-pointer.png'), pointer !important;
+    }
+
+    .navlink li a:hover, .navlink li a.active {
+        color: #ffffff;
+    }
+
+    .navlink li a::before, .navlink li a.active::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        width: 0;
+        height: 2px;
+        background-color: #EC994B;
+        transition: all .5s ;
+    }
+
+    .navlink li a:hover::before, .navlink li a.active::before {
+        width: 100%;
+        text-decoration: none;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+        <a href="index.html"><img class="logo" src="img/gigaval-desc.png" alt="logo"></a>
+        <nav>
+            <ul class="navlink">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+      <div class="cursor"></div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-8 col-lg-6 mt-3">
+          <!-- Section Heading-->
+          <div
+            class="section_heading text-center wow fadeInUp"
+            data-wow-delay="0.2s"
+            style="
+              visibility: visible;
+              animation-delay: 0.2s;
+              animation-name: fadeInUp;
+            "
+          >
+            <h1 style="font-family: Poppins Semibold" id="title">Gigaval</h1>
+            <p id="subtitle">Makan ga makan asal minum.</p>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Single Advisor-->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div
+            id="cards"
+            class="single_advisor_profile wow fadeInUp"
+            data-wow-delay="0.2s"
+            style="
+              visibility: visible;
+              animation-delay: 0.2s;
+              animation-name: fadeInUp;
+            "
+          >
+            <!-- Team Thumb-->
+            <div class="advisor_thumb">
+              <img
+                src="https://github.com/OnyxSeal/SEM-4-OS/blob/main/pentolanAlien.png?raw=true"
+                alt=""
+              />
+              <!-- Social Info-->
+              <div class="social-info">
+                <a href="https://www.instagram.com/vall.rar/" target="_blank"
+                  ><i class="fa fa-instagram"></i></a
+                ><a href="https://www.facebook.com/vallrar" target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+              </div>
+            </div>
+            <!-- Team Details-->
+            <div class="single_advisor_details_info">
+              <h6>Raival Maulidan M A</h6>
+              <!-- <p class="designation">Founder &amp; CEO</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", (e) => {
+      cursor.setAttribute(
+        "style",
+        "top: " + (e.pageY - 15) + "px; left: " + (e.pageX - 20) + "px;"
+      );
+    });
+
+    //Add on click pulse effect
+    function clickEffect(e) {
+      var effect = document.createElement("div");
+      effect.className = "cursoreffect";
+      effect.setAttribute(
+        "style",
+        "top: " + (e.pageY - 16) + "px; left: " + (e.pageX - 21) + "px;"
+      );
+      document.body.appendChild(effect);
+      effect.addEventListener(
+        "animationend",
+        function () {
+          effect.parentElement.removeChild(effect);
+        }.bind(this)
+      );
+    }
+    document.addEventListener("click", clickEffect);
+  </script>
+</html>

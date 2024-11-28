@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIGAVAL | PRODUCT</title>
+    <link rel="icon" href="https://www.gigaval.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+        font-family: 'Montserrat', sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Navbar Start */
+    li, a {
+        font-weight: 600;
+        font-size: 21px;
+        color: #c2c2c2;
+        text-decoration: none;
+    }
+
+    h2{
+        text-shadow: 5px 5px 0px white;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 8%;
+        background-color: #0c0c0c;
+        z-index: 1000;
+    }
+
+    .logo {
+        cursor: pointer;
+        width: 160px;
+    }
+
+    .navlink {
+        list-style: none;
+    }
+
+    .navlink li {
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+    .navlink li a {
+        position: relative;
+        cursor: url('https://cdn.custom-cursor.com/db/10267/32/among-us-tom-pointer.png'), pointer !important;
+    }
+
+    .navlink li a:hover, .navlink li a.active {
+        color: #ffffff;
+    }
+
+    .navlink li a::before, .navlink li a.active::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        width: 0;
+        height: 2px;
+        background-color: #EC994B;
+        transition: all .5s ;
+    }
+
+    .navlink li a:hover::before, .navlink li a.active::before {
+        width: 100%;
+    }
+    /* Navbar End */
+
+    /* Background Image */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('img/bg.webp') no-repeat center center/cover;
+        background-attachment: fixed;
+        filter: brightness(30%);
+        z-index: -1;
+    }
+
+    /* Content */
+    .content {
+        position: relative;
+        z-index: 1;
+        padding: 150px 0% 50px;
+    }
+
+    .kepala {
+        font-size: 72px;
+        color: #f39c12;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .categProd{
+        margin-top: 150px;
+        padding: 10px;
+        font-size: 36px;
+        color: #f39c12;
+        text-align: center;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        background-position: bottom;
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+    }
+
+    .starlink {
+        background-image: url('');
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+        width: 100%;
+        place-items: center;
+        /* padding: 30px */
+        /* background-color: rgba(255, 255, 255, 0.9); Background color for better text visibility */
+    }
+
+    .starlink-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: #000;
+        text-align: center;
+    }
+
+    .starlink-text h2 {
+        text-transform: uppercase;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 36px;
+    }
+
+    .h-line {
+        width: 265px;
+        background-color: #EC994B;
+        height: 3px;
+        margin: 10px auto;
+    }
+
+    .starlink-text h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        line-height: 36px;
+    }
+
+    .starlink-text h5 {
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 36px;
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+    .starlink-text p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .btn-starlink {
+        display: inline-block;
+        text-align: center;
+        padding: 12px;
+        width: 170px;
+        background-color: #EC994B;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 700;
+        transition: transform 0.3s ease;
+    }
+
+    .btn-starlink:hover {
+        transform: scale(1.03);
+    }
+
+    table {
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        /* margin: 0% 2.5%; */
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    td, th {
+        width: 550px;
+        max-width: 550px;
+        padding: 6px;
+        text-align: center;
+    }
+
+    th{
+        padding-top: 20px;
+    }
+
+    th {
+        padding: 20px 0 0 0;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .ptop{
+        vertical-align: top;
+    }
+
+    .sj{
+        font-size: 20px;
+
+    }
+
+    .sj1{
+        font-size: 18px;
+        font-weight: 550;
+    }
+
+    .descsj{
+        font-weight: 600;
+        line-height: 10px;
+    }
+
+    .upper{
+        text-transform: uppercase;
+    }
+
+    .price{
+        font-size: 28px;
+        padding: 16px;
+        font-weight: 700;
+    }
+
+    .card {
+        margin-top: 10px;
+        box-sizing: border-box;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        transition: 0.5s ease-in-out;
+        border: 1px solid white;
+
+        &:hover{
+            transform: translateY(-5px); /* Menggerakkan elemen ke atas */
+            box-shadow: 0px 5px 28px rgba(255, 165, 0, 0.6); /* Menambahkan glow oranye */
+        }
+    }
+
+    td img{
+        width: 150px;
+    }
+
+    .priceLine{
+        border-top: 1px solid transparent;
+        background-image: linear-gradient(to right, rgba(255, 165, 0, 0), rgba(255, 165, 0, 1), rgba(255, 165, 0, 0));
+        background-position: top;
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+    }
+
+    /* button{
+        margin: 12px;
+        cursor: url('https://cdn.custom-cursor.com/db/10267/32/among-us-tom-pointer.png'), pointer !important;
+        padding: 8px;
+        height: 2rem;
+        width: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        border: 1px solid white;
+    } */
+
+    td a button{
+        margin: 12px;
+        cursor: url('https://cdn.custom-cursor.com/db/10267/32/among-us-tom-pointer.png'), pointer !important;
+        padding: 8px;
+        height: 3rem;
+        width: 250px;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        border: 1px solid rgba(255, 165, 0, 1);
+        transition: 0.5s ease-in-out;
+
+        &:hover{
+            background-color: rgba(255, 165, 0, 0.5);
+        }
+    }
+
+    .pb-30{
+        padding-bottom: 30px;
+    }
+
+    .pt-150{
+        padding-top: 150px;
+    }
+
+    #price{
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    .perpanjang{
+        font-weight: 300;
+        font-size: 13px;
+    }
+
+    .benefit:last-child .perpanjang{
+        padding-bottom: 30px;
+    }
+
+    .benefit{
+        text-align: left;
+
+
+        ::before{
+            content: '\f00c';
+            color: green;
+            font-family: 'Font Awesome 5 Free';
+            color: green;
+            font-weight: 900;
+            margin-right: 8px;
+            display: inline-block; 
+        }
+    }
+
+
+</style>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="index.html"><img class="logo" src="img/gigaval-desc.png" alt="logo"></a>
+        <nav>
+            <ul class="navlink">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html" class="active">Product</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="background"></div>
+        <div class="content">
+            <div class="kepala">
+                <h2>PRODUK</h2>
+            </div>
+            <div class="categProd">
+                <h2>STARLINK</h2>
+            </div>
+            <div class="starlink">
+                <div class="card" id="starlink">
+                    <table>
+                        <tr>
+                            <th colspan="2" class="upper">residential</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pb-30">Best for household</td>
+                        </tr>
+                        <tr class="sj">
+                            <td colspan="2" class="upper">key features</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">Unlimited high-speed, low-latency internet</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr class="sj">
+                            <td colspan="2">MONTHLY SERVICE PLANS</td>
+                        </tr>
+                        <tr class="descsj upper">
+                            <td class="pb-30" colspan="2">Unlimited Data</td>
+                        </tr>
+                        <tr class="descsj upper">
+                            <td class="upper">standard</td>
+                            <td class="price resi">IDR750,000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="priceLine"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="sj pt-150 upper">recommended hardware</td>
+                        </tr>
+                        <tr>
+                            <td class="packPict" colspan="2">
+                                <img src="img/standart_actuated.png" alt="standart_actuated">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="upper sj1" colspan="2">standard actuated</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="price">IDR4,680,000</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <table>
+                        <tr>
+                            <th colspan="2" class="upper">roam</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="ptop pb-30">Best for RVs, nomads, and campers</td>
+                        </tr>
+                        <tr class="sj">
+                            <td colspan="2" class="upper">key features</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">Unlimited Mobile Data inland</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">Portability</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">Pause Service</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2" class="pb-30">
+                                <i class="fa-solid fa-angle-left"></i>
+                                10 mph (16 kph) in-motion
+                            </td>
+                        </tr>
+                        <tr class="sj">
+                            <td colspan="2">MONTHLY SERVICE PLANS</td>
+                        </tr>
+                        <tr class="descsj upper">
+                            <td class="pb-30" colspan="2">Unlimited Mobile Data inland</td>
+                        </tr>
+                        <tr class="descsj upper">
+                            <td class="upper">mobile-regional</td>
+                            <td class="price roam">IDR990,000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="priceLine"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="sj pt-150 upper">recommended hardware</td>
+                        </tr>
+                        <tr>
+                            <td class="packPict" colspan="2">
+                                <img src="img/standart_actuated.png" alt="standart_actuated">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="upper sj1" colspan="2">standard actuated</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="price">IDR4,680,000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="categProd">
+                <h2>GIHOSTING</h2>
+            </div>
+            <div class="starlink">
+                <div class="card" id="Gihosting">
+                    <table>
+                        <tr>
+                            <th colspan="2" class="upper">premium</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="ptop pb-30">Cocok untuk personal branding atau blog Anda</td>
+                        </tr>
+                        <tr class="sj">
+                            <td colspan="2">Rp <span id="price">24,990/</span>bln</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">+ Gratis 3 Bulan</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">
+                                <a href="">
+                                    <button>PILIH PAKET</button>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="descsj">
+                            <td class="perpanjang">Rp49.900/bln saat perpanjang layanan</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="priceLine"></td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">100 Website</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Managed WordPress</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">100 GB SSD Storage</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Website Builder Niagahoster</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Domain Gratis (senilai Rp147.900)</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Gratis Migrasi Website Otomatis</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Email Gratis</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">SSL Gratis Unlimited</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Starter WooCommerce</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Gratis CDN</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Alamat IP Dedicated</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Bantuan Prioritas</td>
+                        </tr>                        
+                    </table>
+                </div>
+                <div class="card" id="Gihosting">
+                    <table>
+                        <tr>
+                            <th colspan="2" class="ptop upper">bussines</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="pb-30">Paket lengkap untuk bisnis, portal berita.</td>
+                        </tr>
+                        <tr class="sj">
+                            <td colspan="2">Rp <span id="price">45,900/</span>bln</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">+ Gratis 3 Bulan</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">
+                                <a href="">
+                                    <button>PILIH PAKET</button>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="descsj">
+                            <td class="perpanjang">Rp49.900/bln saat perpanjang layanan</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="priceLine"></td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">100 Website</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Managed WordPress</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">200 GB NVMe Storage</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Domain Gratis (senilai Rp147.900)</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Gratis Migrasi Website Otomatis</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Email Gratis</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">SSL Gratis Unlimited</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Backup Harian (senilai Rp394.800)</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Basic WooCommerce</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">CDN gratis</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Alamat IP Dedicated</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Bantuan Prioritas</td>
+                        </tr>                                        
+                    </table>
+                </div>
+                <div class="card" id="Gihosting">
+                    <table>
+                        <tr>
+                            <th colspan="2" class="upper">cloud startup</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="ptop pb-30">Performa website yang lebih optimal</td>
+                        </tr>
+                        <tr class="sj">
+                            <td colspan="2">Rp <span id="price">150,000/</span>bln</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">+ Gratis 3 Bulan</td>
+                        </tr>
+                        <tr class="descsj">
+                            <td colspan="2">
+                                <a href="">
+                                    <button>PILIH PAKET</button>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="descsj">
+                            <td class="perpanjang">Rp49.900/bln saat perpanjang layanan</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="priceLine"></td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">300 Website</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Managed WordPress</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">200 GB NVMe Storage</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Website Builder Niagahoster</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Domain Gratis (senilai Rp147.900)</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Email Gratis</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">SSL Gratis Unlimited</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Backup Harian (senilai Rp394.800)</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">WooCommerce Standard</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">CDN gratis</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Alamat IP Dedicated</td>
+                        </tr>
+                        <tr class="benefit">
+                            <td class="perpanjang">Bantuan Prioritas</td>
+                        </tr>                                          
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>

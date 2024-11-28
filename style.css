@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HOME START */
+.home {
+    height: 350vh;
+    background: rgba(0, 0, 0, 0.5) url('img/v882-kul-44-a.jpg');
+    background-blend-mode: darken;
+}
+
+/* Navbar Start */
+li, a {
+    font-weight: 600;
+    font-size: 21px;
+    color: #c2c2c2;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: #0c0c0c;
+    z-index: 1000;
+}
+
+.logo {
+    cursor: url('https://cdn.custom-cursor.com/db/10267/32/among-us-tom-pointer.png'), pointer !important;
+    width: 160px;
+}
+
+.navlink {
+    list-style: none;
+}
+
+.navlink li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navlink li a {
+    position: relative;
+    cursor: url('https://cdn.custom-cursor.com/db/10267/32/among-us-tom-pointer.png'), pointer !important;
+}
+
+.navlink li a:hover, .navlink li a.active {
+    color: #ffffff;
+}
+
+.navlink li a::before, .navlink li a.active::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #EC994B;
+    transition: all .5s ;
+}
+
+.navlink li a:hover::before, .navlink li a.active::before {
+    width: 100%;
+}
+/* Navbar End */
+
+/* Hero Start */
+.hero {
+    display: flex;
+    height: 110vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: #ffffff;
+
+    h2 {
+        font-size: 70px;
+        font-weight: 800;
+        color: #EC994B;
+        margin-bottom: 5px;
+    }
+
+    h3 {
+        margin: 3px;
+        font-size: 35px;
+        font-weight: 600;
+    }
+}
+/* Hero End */
+
+/* Starlink Start */
+.starlink {
+    background: rgba(0, 0, 0, 0.5) url(img/residential_a_feature1_d.jpg);
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+
+.starlink-text {
+    color: #ffffff;
+    padding: 50px 8%;
+
+    h1 {
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    .h-line {
+        width: 265px;
+        background-color: #EC994B;
+        height: 3px;
+        margin-top: 7px;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        max-width: 65%;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 500;
+        max-width: 65%;
+        margin-bottom: 30px;
+    }
+
+    .btn-starlink {
+        text-align: center;
+        padding: 12px;
+        width: 170px;
+        height: 50px;
+        background-color: #EC994B;
+        border-radius: 10px;
+        font-size: 20px;
+        transition: transform 0.3s ease;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    .btn-starlink:hover {
+        transform: scale(1.03);
+    }
+}
+/* Starlink End */
+
+/* Gihosting Start */
+.gihosting {
+    height: 110vh;
+    padding: 50px 8%;
+    background: #ffffff;
+}
+
+.container-gihosting{
+    display: flex;
+    padding: 50px 0;
+}
+
+.gimg {
+    width: 400px;
+}
+
+.gihosting-text {
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    h1 {
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    .h-line {
+        background-color: #EC994B;
+        width: 293px;
+        height: 3px;
+        margin-top: 7px;
+        margin-bottom: 20px;
+        float: right;
+    }
+
+    h3 {
+        font-size: 33px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        margin-left: 80px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        margin-left: 100px;
+    }
+
+    .btn-gihosting {
+        text-align: center;
+        padding: 12px;
+        width: 170px;
+        height: 50px;
+        background-color: #EC994B;
+        border-radius: 10px;
+        font-size: 20px;
+        transition: transform 0.3s ease;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    .btn-gihosting:hover {
+        transform: scale(1.03);
+    }
+}
+/* Gihosting End */
+
+/* Footer */
+footer {
+    padding: 30px 8%;
+    background-color: #0c0c0c;
+}
+
+.footer {
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 20px;
+        margin: 0 5px;    
+    }
+
+    .lb {
+        margin: 0 5px;
+    }
+}
+/* Footer End */
+/* HOME END */
+
+/* About start */
+.about {
+    height: 120vh;
+    background: rgba(0, 0, 0, 0.5) url('img/v882-kul-44-a.jpg');
+    background-blend-mode: darken;
+}
+
+.about-us {
+    display: flex;
+    height: 105vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    text-align: center;
+    color: #ffffff;
+    max-width: 900px;
+
+    h1 {
+        font-size: 40px;
+        font-weight: 800;
+        color: #EC994B;
+        margin-bottom: 5px;
+    }
+
+    p {
+        margin: 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+/* Product */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/toge-inumaki.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+/* Content */
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 150px 8% 50px;
+}
+
+.kepala {
+    font-size: 72px;
+    color: #f39c12;
+    text-align: center;
+    margin-bottom: 50px;
+}
